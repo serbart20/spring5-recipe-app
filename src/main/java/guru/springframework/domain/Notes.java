@@ -1,16 +1,18 @@
 package guru.springframework.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 
-/**
- * Created by jt on 6/13/17.
- */
 @Entity
 public class Notes {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    private Long Id;
 
     @OneToOne
     private Recipe recipe;
@@ -19,15 +21,15 @@ public class Notes {
     private String recipeNotes;
 
     public Long getId() {
-        return id;
+        return this.Id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     public Recipe getRecipe() {
-        return recipe;
+        return this.recipe;
     }
 
     public void setRecipe(Recipe recipe) {
@@ -35,7 +37,7 @@ public class Notes {
     }
 
     public String getRecipeNotes() {
-        return recipeNotes;
+        return this.recipeNotes;
     }
 
     public void setRecipeNotes(String recipeNotes) {

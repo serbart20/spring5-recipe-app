@@ -1,10 +1,13 @@
 package guru.springframework.domain;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 
-/**
- * Created by jt on 6/13/17.
- */
 @Entity
 public class Recipe {
 
@@ -29,15 +32,15 @@ public class Recipe {
     private Notes notes;
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
+    }    
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -45,7 +48,7 @@ public class Recipe {
     }
 
     public Integer getPrepTime() {
-        return prepTime;
+        return this.prepTime;
     }
 
     public void setPrepTime(Integer prepTime) {
@@ -53,7 +56,7 @@ public class Recipe {
     }
 
     public Integer getCookTime() {
-        return cookTime;
+        return this.cookTime;
     }
 
     public void setCookTime(Integer cookTime) {
@@ -61,7 +64,7 @@ public class Recipe {
     }
 
     public Integer getServings() {
-        return servings;
+        return this.servings;
     }
 
     public void setServings(Integer servings) {
@@ -69,7 +72,7 @@ public class Recipe {
     }
 
     public String getSource() {
-        return source;
+        return this.source;
     }
 
     public void setSource(String source) {
@@ -77,7 +80,7 @@ public class Recipe {
     }
 
     public String getUrl() {
-        return url;
+        return this.url;
     }
 
     public void setUrl(String url) {
@@ -85,7 +88,7 @@ public class Recipe {
     }
 
     public String getDirections() {
-        return directions;
+        return this.directions;
     }
 
     public void setDirections(String directions) {
@@ -93,7 +96,7 @@ public class Recipe {
     }
 
     public Byte[] getImage() {
-        return image;
+        return this.image;
     }
 
     public void setImage(Byte[] image) {
@@ -101,7 +104,7 @@ public class Recipe {
     }
 
     public Notes getNotes() {
-        return notes;
+        return this.notes;
     }
 
     public void setNotes(Notes notes) {
